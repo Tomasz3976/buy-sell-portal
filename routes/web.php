@@ -15,3 +15,5 @@ use App\Http\Controllers\AuctionController;
 */
 
 Route::get('/auctions', [AuctionController::class, 'index']);
+Route::get('/auctions/create', [AuctionController::class, 'create'])->name('auctions.create');
+Route::post('/auctions', [AuctionController::class, 'store'])->name('auctions.store');

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('category');
             $table->decimal('price');
             $table->dateTime('endDate');
+            $table->string('photo')->nullable();
             $table->unsignedInteger('user_id');
 
             $table->foreign('user_id')->references('id')->on('users');

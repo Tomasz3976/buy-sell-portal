@@ -6,6 +6,7 @@ use App\Models\Auction;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Storage;
 
 class DatabaseSeeder extends Seeder
 {
@@ -46,6 +47,7 @@ class DatabaseSeeder extends Seeder
             'category' => 'Electronics',
             'price' => 1000,
             'endDate' => '2023-06-30 20:00:00',
+            'photo' => 'iphoneX.jpg'
         ]);
 
         $users[1]->auctions()->create([
@@ -54,6 +56,7 @@ class DatabaseSeeder extends Seeder
             'category' => 'Electronics',
             'price' => 1500,
             'endDate' => '2023-07-10 18:00:00',
+            'photo' => 'canonEOS.jpg'
         ]);
     }
 }

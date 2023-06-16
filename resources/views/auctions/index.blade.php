@@ -6,7 +6,7 @@
             @foreach ($auctions as $auction)
                 <div class="col-md-4">
                     <div class="card mb-3">
-                        <img src="{{ $auction->photo }}" class="card-img-top" alt="Auction Photo">
+                        <img src="{{ asset('storage/' . $auction->photo) }}" class="card-img-top" alt="Auction Photo">
                         <div class="card-body">
                             <h5 class="card-title">{{ $auction->name }}</h5>
                             <p class="card-text">Condition: {{ $auction->condition }}</p>

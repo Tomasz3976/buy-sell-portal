@@ -13,7 +13,8 @@ class Auction extends Model
         'condition',
         'category',
         'price',
-        'endDate'
+        'endDate',
+        'photo'
     ];
 
     public function user()

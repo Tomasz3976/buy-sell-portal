@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('password');
             $table->string('email')->unique();
             $table->string('phoneNumber')->unique();
+            $table->enum('role', ['user', 'admin'])->default('user');
         });
     }
 

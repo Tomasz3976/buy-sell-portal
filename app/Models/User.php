@@ -19,6 +19,7 @@ class User extends Model implements Authenticatable
         'password',
         'email',
         'phoneNumber',
+        'money'
     ];
 
     protected $hidden = [

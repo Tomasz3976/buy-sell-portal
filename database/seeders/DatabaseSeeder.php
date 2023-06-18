@@ -24,7 +24,6 @@ class DatabaseSeeder extends Seeder
                 'password' => bcrypt('Password123#'),
                 'email' => 'johndoe34@outlook.com',
                 'phoneNumber' => '123456789',
-                'role' => 'user'
             ],
             [
                 'firstName' => 'Jane',
@@ -33,7 +32,6 @@ class DatabaseSeeder extends Seeder
                 'password' => bcrypt('myAmazingPassword#55'),
                 'email' => 'janesmith555@outlook.com',
                 'phoneNumber' => '987654321',
-                'role' => 'user'
             ],
             [
                 'firstName' => 'William',
@@ -42,7 +40,6 @@ class DatabaseSeeder extends Seeder
                 'password' => bcrypt('littleLeaf44@@'),
                 'email' => 'williamSimon@gmail.com',
                 'phoneNumber' => '574022186',
-                'role' => 'user'
             ],
             [
                 'firstName' => 'Amanda',
@@ -51,7 +48,6 @@ class DatabaseSeeder extends Seeder
                 'password' => bcrypt('MyFavouritePlaceIsLondon993!!'),
                 'email' => 'amandaNunez.567@outlook.com',
                 'phoneNumber' => '679300126',
-                'role' => 'user'
             ]
         ];
 

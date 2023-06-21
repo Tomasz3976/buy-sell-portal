@@ -3,6 +3,11 @@
 @section('content')
     <div class="container">
         <div class="row">
+            <div class="col-md-12 mb-3">
+                <a href="{{ route('auctions.create') }}" class="btn btn-primary">{{ __('Create Auction') }}</a>
+            </div>
+        </div>
+        <div class="row">
             @foreach ($auctions as $auction)
                 <div class="col-md-4">
                     <div class="card mb-3">

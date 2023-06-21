@@ -38,10 +38,12 @@
                                 <input type="datetime-local" name="endDate" class="form-control" id="endDate" required>
                             </div>
                             <div class="form-group">
-                                <label for="photo">Photo</label>
+                                <label for="photo">Choose File</label>
                                 <input type="file" name="photo" class="form-control-file" id="photo">
                             </div>
-                            <button type="submit" class="btn btn-primary">Create Auction</button>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">Create Auction</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -50,12 +52,12 @@
     </div>
     <br></br>
     @if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 @endsection

@@ -33,7 +33,7 @@ class UserController extends Controller
 }
 
 
-    public function destroyAuction($id)
+    public function deleteAuction($id)
     {
         $auction = Auction::findOrFail($id);
 

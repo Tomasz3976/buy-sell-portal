@@ -12,6 +12,12 @@
                             <h2 class="mb-4">{{ __('Welcome to User Panel') }}</h2>
                         </div>
 
+                        @if (session('success'))
+                            <div class="alert alert-success">
+                                {{ session('success') }}
+                            </div>
+                        @endif
+
                         <div class="d-flex flex-column align-items-center">
                             <a href="{{ route('user.auctions.listed') }}" class="btn btn-primary btn-lg mb-3">{{ __('My Auctions') }}</a>
                             <a href="{{ route('user.auctions.bought') }}" class="btn btn-primary btn-lg mb-3">{{ __('Bought Items') }}</a>

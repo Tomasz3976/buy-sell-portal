@@ -30,7 +30,7 @@ Route::group(['middleware' => 'auth.user'], function () {
 
     Route::get('/user/panel', [UserController::class, 'panel'])->name('user.panel');
     Route::get('/user/auctions/listed', [UserController::class, 'listedAuctions'])->name('user.auctions.listed');
-    Route::delete('user/auctions/{id}', [UserController::class, 'destroyAuction'])->name('user.auctions.destroy');
+    Route::delete('user/auctions/{id}', [UserController::class, 'deleteAuction'])->name('user.auctions.delete');
     Route::get('/user/auctions/bought', [UserController::class, 'boughtAuctions'])->name('user.auctions.bought');
     Route::get('/user/addMoney', [UserController::class, 'showAddMoneyForm'])->name('user.showAddMoneyForm');
     Route::post('/user/addMoney', [UserController::class, 'addMoney'])->name('user.processAddMoney');
@@ -38,6 +38,8 @@ Route::group(['middleware' => 'auth.user'], function () {
     Route::get('/auctions', [AuctionController::class, 'index'])->name('auctions.index');
     Route::get('/auctions/create', [AuctionController::class, 'create'])->name('auctions.create');
     Route::post('/auctions', [AuctionController::class, 'store'])->name('auctions.store');
+    Route::get('/auctions/buy/{id}', [AuctionController::class, 'buy'])->name('auctions.buy');
+    Route::post('/auctions/{id}/confirm-buy', [AuctionController::class, 'confirmBuy'])->name('auctions.confirmBuy');
     
 });
 

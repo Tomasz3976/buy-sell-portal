@@ -80,7 +80,7 @@ class DatabaseSeeder extends Seeder
             'condition' => 'new',
             'category' => 'Electronics',
             'price' => 1500,
-            'endDate' => '2023-06-30 20:00:00',
+            'endDate' => '2023-06-20 20:00:00',
             'photo' => 'canonEOS.jpg'
         ]);
 

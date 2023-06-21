@@ -2,6 +2,11 @@
 
 @section('content')
     <div class="container">
+        @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
         <div class="row">
             <div class="col-md-12 mb-3">
                 <a href="{{ route('auctions.create') }}" class="btn btn-primary">{{ __('Create Auction') }}</a>
@@ -19,6 +24,7 @@
                             <p class="card-text">Price: {{ $auction->price }}</p>
                             <p class="card-text">End Date: {{ $auction->endDate }}</p>
                             <p class="card-text">Sold: {{ $auction->isSold ? 'true' : 'false' }}</p>
+                            <a href="{{ route('auctions.buy', ['id' => $auction->id]) }}" class="btn btn-primary">{{ __('Buy') }}</a>
                         </div>
                     </div>
                 </div>

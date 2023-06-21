@@ -2,6 +2,11 @@
 
 @section('content')
     <div class="container">
+        <div class="row justify-content-start mb-3">
+            <div class="col-md-8">
+                <a href="{{ route('home') }}" class="btn btn-primary btn-lg">Go to Home</a>
+            </div>
+        </div>
         <div class="row">
             @foreach ($auctions as $auction)
                 <div class="col-md-4">
@@ -13,6 +18,7 @@
                             <p class="card-text">Category: {{ $auction->category }}</p>
                             <p class="card-text">Price: {{ $auction->price }}</p>
                             <p class="card-text">End Date: {{ $auction->endDate }}</p>
+                            <p class="card-text">Sold: {{ $auction->isSold ? 'true' : 'false' }}</p>
                         </div>
                     </div>
                 </div>

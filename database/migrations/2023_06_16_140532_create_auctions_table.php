@@ -19,6 +19,7 @@ return new class extends Migration
             $table->decimal('price');
             $table->dateTime('endDate');
             $table->string('photo')->nullable();
+            $table->boolean('isSold')->default(false);
             $table->unsignedInteger('user_id');
 
             $table->foreign('user_id')->references('id')->on('users');

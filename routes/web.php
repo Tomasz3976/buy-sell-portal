@@ -30,8 +30,10 @@ Route::group(['middleware' => 'auth.user'], function () {
 
     Route::get('/user/panel', [UserController::class, 'panel'])->name('user.panel');
     Route::get('/user/auctions/listed', [UserController::class, 'listedAuctions'])->name('user.auctions.listed');
-    Route::delete('user/auctions/{id}', [UserController::class, 'deleteAuction'])->name('user.auctions.delete');
+    Route::get('/user/auctions/{id}/edit', [UserController::class, 'editAuction'])->name('user.auctions.edit');
+    Route::put('/user/auctions/{id}', [UserController::class, 'updateAuction'])->name('user.auctions.update');
     Route::get('/user/auctions/bought', [UserController::class, 'boughtAuctions'])->name('user.auctions.bought');
+    Route::delete('user/auctions/{id}', [UserController::class, 'deleteAuction'])->name('user.auctions.delete');
     Route::get('/user/addMoney', [UserController::class, 'showAddMoneyForm'])->name('user.showAddMoneyForm');
     Route::post('/user/addMoney', [UserController::class, 'addMoney'])->name('user.processAddMoney');
 

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuctionController;
 use App\Http\Controllers\MoneyController;
 
@@ -16,19 +17,30 @@ use App\Http\Controllers\MoneyController;
 |
 */
 
-Auth::routes();
+Auth::routes([
+    'login' => true,
+    'logout' => true,
+    'register' => true,
+    'reset' => false,
+]);
 
 
 Route::group(['middleware' => 'auth.user'], function () {
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+    Route::get('/user/panel', [UserController::class, 'panel'])->name('user.panel');
+    Route::get('/user/auctions/listed', [UserController::class, 'listedAuctions'])->name('user.auctions.listed');
+    Route::delete('user/auctions/{id}', [UserController::class, 'destroyAuction'])->name('user.auctions.destroy');
+    Route::get('/user/auctions/bought', [UserController::class, 'boughtAuctions'])->name('user.auctions.bought');
+    Route::get('/user/addMoney', [UserController::class, 'showAddMoneyForm'])->name('user.showAddMoneyForm');
+    Route::post('/user/addMoney', [UserController::class, 'addMoney'])->name('user.processAddMoney');
+
     Route::get('/auctions', [AuctionController::class, 'index'])->name('auctions.index');
     Route::get('/auctions/create', [AuctionController::class, 'create'])->name('auctions.create');
     Route::post('/auctions', [AuctionController::class, 'store'])->name('auctions.store');
     
-    Route::get('/money/add', [MoneyController::class, 'addMoney'])->name('money.add');
-    Route::post('/money/add', [MoneyController::class, 'store'])->name('money.store');
 });
+
 Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function() {
 
 });
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

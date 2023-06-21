@@ -22,6 +22,10 @@
                         <div class="mt-5 d-flex justify-content-center">
                             <a href="{{ route('auctions.index') }}" class="btn btn-primary btn-lg">{{ __('Go to Auctions') }}</a>
                         </div>
+
+                        <div class="mt-3 d-flex justify-content-center">
+                            <a href="{{ route('user.panel') }}" class="btn btn-secondary btn-lg">{{ __('User Panel') }}</a>
+                        </div>
                     </div>
                 </div>
             </div>

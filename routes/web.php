@@ -1,10 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AuctionController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\AuctionController;
-use App\Http\Controllers\MoneyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,6 +45,9 @@ Route::group(['middleware' => 'auth.user'], function () {
     
 });
 
-Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function() {
-
+Route::prefix('/admin')->middleware(['auth', 'isAdmin'])->group(function() {
+    Route::get('/auctions', [AdminController::class, 'index'])->name('admin.auctions.index');
+    Route::get('/auctions/{id}/edit', [AdminController::class, 'edit'])->name('admin.auctions.edit');
+    Route::put('/auctions/{id}', [AdminController::class, 'update'])->name('admin.auctions.update');
+    Route::delete('/auctions/{id}', [AdminController::class, 'delete'])->name('admin.auctions.delete');
 });

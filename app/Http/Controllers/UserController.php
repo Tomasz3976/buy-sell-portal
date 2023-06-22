@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Auction;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
+use App\Models\Auction;
 
 class UserController extends Controller
 {

@@ -24,13 +24,13 @@
                                                 <h5 class="card-title">{{ $auction->name }}</h5>
                                                 <p class="card-text">Condition: {{ $auction->condition }}</p>
                                                 <p class="card-text">Category: {{ $auction->category }}</p>
-                                                <p class="card-text">Price: ${{ $auction->price }}</p>
+                                                <p class="card-text">Price: {{ $auction->price }}</p>
                                                 <p class="card-text">End Date: {{ $auction->endDate }}</p>
                                                 <div class="d-flex justify-content-between">
-                                                    <form action="{{ route('user.auctions.delete', $auction->id) }}" method="POST" class="mt-2">
+                                                    <form action="{{ route('user.auctions.delete', $auction->id) }}" method="POST">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this auction?')">{{ __('Delete') }}</button>
+                                                        <button type="submit" class="btn btn-danger" data-confirm="Are you sure you want to delete this auction on Buy Sell Portal?">{{ __('Delete') }}</button>
                                                     </form>
                                                     <a href="{{ route('user.auctions.edit', $auction->id) }}" class="btn btn-primary">{{ __('Edit') }}</a>
                                                 </div>

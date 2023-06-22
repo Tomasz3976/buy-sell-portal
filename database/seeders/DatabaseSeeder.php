@@ -4,7 +4,6 @@ namespace Database\Seeders;
 use App\Models\User;
 use App\Models\Auction;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Storage;
 
@@ -48,6 +47,15 @@ class DatabaseSeeder extends Seeder
                 'password' => bcrypt('MyFavouritePlaceIsLondon993!!'),
                 'email' => 'amandaNunez.567@outlook.com',
                 'phoneNumber' => '679300126',
+            ],
+            [
+                'firstName' => 'Admin',
+                'lastName' => 'Admin',
+                'username' => 'AdminAdmin',
+                'password' => bcrypt('1234ABCD6789GHIJ'),
+                'email' => 'adminadmin.789@outlook.com',
+                'phoneNumber' => '198756432',
+                'role' => 1
             ]
         ];
 

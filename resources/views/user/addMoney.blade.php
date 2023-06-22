@@ -13,7 +13,12 @@
 
                             <div class="form-group">
                                 <label for="amount">{{ __('Amount') }}</label>
-                                <input type="number" name="amount" id="amount" class="form-control">
+                                <input type="number" name="amount" id="amount" class="form-control @error('amount') is-invalid @enderror">
+                                @error('amount')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
 
                             <div class="mt-4">

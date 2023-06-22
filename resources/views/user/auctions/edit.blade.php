@@ -13,7 +13,7 @@
                             @method('PUT')
                             <div class="form-group">
                                 <label for="name">{{ __('Name') }}</label>
-                                <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" id="name" required>
+                                <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" id="name">
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -22,7 +22,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="condition">{{ __('Condition') }}</label>
-                                <select name="condition" class="form-control @error('condition') is-invalid @enderror" id="condition" required>
+                                <select name="condition" class="form-control @error('condition') is-invalid @enderror" id="condition">
                                     <option value="new">New</option>
                                     <option value="used">Used</option>
                                 </select>
@@ -34,7 +34,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="category">{{ __('Category') }}</label>
-                                <select name="category" class="form-control @error('category') is-invalid @enderror" id="category" required>
+                                <select name="category" class="form-control @error('category') is-invalid @enderror" id="category">
                                     <option value="electronics">Electronics</option>
                                     <option value="fashion">Fashion</option>
                                     <option value="home">Home</option>
@@ -48,7 +48,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="price">{{ __('Price') }}</label>
-                                <input type="number" name="price" class="form-control @error('price') is-invalid @enderror" id="price" required>
+                                <input type="number" name="price" class="form-control @error('price') is-invalid @enderror" id="price">
                                 @error('price')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -57,7 +57,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="endDate">{{ __('End Date') }}</label>
-                                <input type="datetime-local" name="endDate" class="form-control @error('endDate') is-invalid @enderror" id="endDate" required>
+                                <input type="datetime-local" name="endDate" class="form-control @error('endDate') is-invalid @enderror" id="endDate">
                                 @error('endDate')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

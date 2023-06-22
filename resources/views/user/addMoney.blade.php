@@ -13,7 +13,7 @@
 
                             <div class="form-group">
                                 <label for="amount">{{ __('Amount') }}</label>
-                                <input type="number" name="amount" id="amount" class="form-control" required>
+                                <input type="number" name="amount" id="amount" class="form-control">
                             </div>
 
                             <div class="mt-4">

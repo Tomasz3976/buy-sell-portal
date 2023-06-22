@@ -11,18 +11,18 @@
                             @csrf
                             <div class="form-group">
                                 <label for="name">Name</label>
-                                <input type="text" name="name" class="form-control" id="name" required>
+                                <input type="text" name="name" class="form-control" id="name">
                             </div>
                             <div class="form-group">
                                 <label for="condition">Condition</label>
-                                <select name="condition" class="form-control" id="condition" required>
+                                <select name="condition" class="form-control" id="condition">
                                     <option value="new">New</option>
                                     <option value="used">Used</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="category">Category</label>
-                                <select name="category" class="form-control" id="category" required>
+                                <select name="category" class="form-control" id="category">
                                     <option value="electronics">Electronics</option>
                                     <option value="fashion">Fashion</option>
                                     <option value="home">Home</option>
@@ -31,11 +31,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="price">Price</label>
-                                <input type="number" name="price" class="form-control" id="price" required>
+                                <input type="number" name="price" class="form-control" id="price">
                             </div>
                             <div class="form-group">
                                 <label for="end_date">End Date</label>
-                                <input type="datetime-local" name="endDate" class="form-control" id="endDate" required>
+                                <input type="datetime-local" name="endDate" class="form-control" id="endDate">
                             </div>
                             <div class="form-group">
                                 <label for="photo">Choose File</label>
